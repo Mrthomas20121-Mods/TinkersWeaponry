@@ -1,0 +1,51 @@
+package mrthomas20121.thermalconstruct.datagen;
+
+import mrthomas20121.thermalconstruct.TinkersWeaponry;
+import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.LanguageProvider;
+import slimeknights.tconstruct.common.registration.CastItemObject;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
+
+public class TinkersWeaponryLangProvider extends LanguageProvider {
+
+    public TinkersWeaponryLangProvider(PackOutput output) {
+        super(output, TinkersWeaponry.MOD_ID, "en_us");
+    }
+
+    @Override
+    protected void addTranslations() {
+
+        add("itemGroup.tinkersweaponry.tool_parts", "Tinkers' Weaponry Tool Parts");
+        add("itemGroup.tinkersweaponry.tools", "Tinkers' Weaponry Tools");
+
+        add(TinkersWeaponryItems.GREAT_BLADE.get(), "Great Blade");
+        add(TinkersWeaponryItems.SPEAR_HEAD.get(), "Spear Head");
+
+        add(TinkersWeaponryItems.GREATSWORD.get(), "Greatsword");
+        add(TinkersWeaponryItems.SPEAR.get(), "Spear");
+        add(TinkersWeaponryItems.PIKE.get(), "Pike");
+        add(TinkersWeaponryItems.LANCE.get(), "Lance");
+
+        addCast(TinkersWeaponryItems.GREAT_BLADE_CAST, "Great Blade");
+        addCast(TinkersWeaponryItems.SPEAR_HEAD_CAST, "Spear Head");
+    }
+
+    public void addCast(CastItemObject cast, String castName) {
+        add(cast.getSand(), castName + " Sand Cast");
+        add(cast.getRedSand(), castName + " Red Sand Cast");
+        add(cast.get(), castName + " Cast");
+    }
+
+    public void addModifier(ModifierId material, String s) {
+        add("modifier."+material.getNamespace()+"."+material.getPath(), s);
+    }
+
+    public void addModifierFlavor(ModifierId material, String s) {
+        add("modifier."+material.getNamespace()+"."+material.getPath()+".flavor", s);
+    }
+
+    public void addModifierDesc(ModifierId material, String s) {
+        add("modifier."+material.getNamespace()+"."+material.getPath()+".description", s);
+    }
+}
