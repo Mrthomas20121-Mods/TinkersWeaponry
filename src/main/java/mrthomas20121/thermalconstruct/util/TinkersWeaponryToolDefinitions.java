@@ -7,8 +7,6 @@ public class TinkersWeaponryToolDefinitions {
 
     public static ToolDefinition GREATSWORD = ToolDefinition.create(TinkersWeaponryItems.GREATSWORD);
 
-    public static ToolDefinition SPEAR = ToolDefinition.create(TinkersWeaponryItems.SPEAR);
-
     public static ToolDefinition PIKE = ToolDefinition.create(TinkersWeaponryItems.PIKE);
 
     public static ToolDefinition LANCE = ToolDefinition.create(TinkersWeaponryItems.LANCE);

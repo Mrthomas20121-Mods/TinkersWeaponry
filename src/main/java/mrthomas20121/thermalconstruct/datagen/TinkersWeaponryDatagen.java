@@ -37,11 +37,14 @@ public class TinkersWeaponryDatagen {
         generator.addProvider(server, new TinkersWeaponryItemTagsProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
         generator.addProvider(server, new TinkersWeaponryRecipeProvider(packOutput));
         generator.addProvider(server, new TinkersWeaponryModifierProvider(packOutput));
+        generator.addProvider(server, new WeaponryStationSlotLayoutProvider(packOutput));
+        generator.addProvider(server, new TinkersWeaponryToolDefinitionDataProvider(packOutput));
 
         TinkersWeaponryPartSpriteProvider partSprites = new TinkersWeaponryPartSpriteProvider();
 
         boolean client = event.includeClient();
         generator.addProvider(client, new TinkersWeaponryItemModelProvider(packOutput, existingFileHelper));
+        generator.addProvider(client, new WeaponryToolItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput, TConstruct.MOD_ID, partSprites));
         generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, materialSprites));
         generator.addProvider(client, new TinkersWeaponryColorProvider(packOutput));

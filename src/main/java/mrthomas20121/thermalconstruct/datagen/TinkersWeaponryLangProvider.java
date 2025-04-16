@@ -23,7 +23,6 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
         add(TinkersWeaponryItems.SPEAR_HEAD.get(), "Spear Head");
 
         add(TinkersWeaponryItems.GREATSWORD.get(), "Greatsword");
-        add(TinkersWeaponryItems.SPEAR.get(), "Spear");
         add(TinkersWeaponryItems.PIKE.get(), "Pike");
         add(TinkersWeaponryItems.LANCE.get(), "Lance");
 
@@ -48,4 +47,6 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
     public void addModifierDesc(ModifierId material, String s) {
         add("modifier."+material.getNamespace()+"."+material.getPath()+".description", s);
     }
+
+
 }

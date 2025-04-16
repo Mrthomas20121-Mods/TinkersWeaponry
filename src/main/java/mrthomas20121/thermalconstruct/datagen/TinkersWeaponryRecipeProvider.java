@@ -1,9 +1,11 @@
 package mrthomas20121.thermalconstruct.datagen;
 
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
+import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.world.item.crafting.Ingredient;
 import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
@@ -37,6 +39,13 @@ public class TinkersWeaponryRecipeProvider extends RecipeProvider implements IMa
         String compatFolder = "tools/modifiers/compat/";
         String compatSalvage = "tools/modifiers/salvage/compat/";
         String worktableFolder = "tools/modifiers/worktable/";
+
+        castCreation(consumer, Ingredient.of(TinkersWeaponryItems.GREAT_BLADE.get()), TinkersWeaponryItems.GREAT_BLADE_CAST, castFolder, "great_blade");
+        castCreation(consumer, Ingredient.of(TinkersWeaponryItems.SPEAR_HEAD.get()), TinkersWeaponryItems.SPEAR_HEAD_CAST, castFolder, "spear_head");
+
+        toolBuilding(consumer, TinkersWeaponryItems.GREATSWORD.get(), "tools/building/");
+        toolBuilding(consumer, TinkersWeaponryItems.LANCE.get(), "tools/building/");
+        toolBuilding(consumer, TinkersWeaponryItems.PIKE.get(), "tools/building/");
     }
 
     @Override

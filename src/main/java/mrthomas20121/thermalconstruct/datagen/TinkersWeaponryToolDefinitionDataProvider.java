@@ -64,7 +64,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                         .set(ToolStats.ATTACK_SPEED, 1.2f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
                         .set(ToolStats.MINING_SPEED, 0.5f)
-                        .set(ToolStats.DURABILITY, 1.1f).build()))
+                        .set(ToolStats.DURABILITY, 1f).build()))
                 .smallToolStartingSlots()
                 // traits
                 .module(ToolTraitsModule.builder()
@@ -73,30 +73,6 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // behavior
                 .module(swordHarvest)
                 .module(new CircleWeaponAttack(2));
-
-        define(TinkersWeaponryToolDefinitions.SPEAR)
-                // parts
-                .module(PartStatsModule.parts()
-                        .part(TinkersWeaponryItems.SPEAR_HEAD.get())
-                        .part(toolHandle, 0.5f)
-                        .part(toolHandle, 0.5f).build())
-                .module(defaultThreeParts)
-                // stats
-                .module(new SetStatsModule(StatsNBT.builder()
-                        .set(TinkersWeaponryToolStats.CRIT_CHANCE, 0.3f)
-                        .set(ToolStats.ATTACK_DAMAGE, 3f)
-                        .set(ToolStats.ATTACK_SPEED, 1.8f).build()))
-                .module(new MultiplyStatsModule(MultiplierNBT.builder()
-                        .set(ToolStats.MINING_SPEED, 0.5f)
-                        .set(ToolStats.DURABILITY, 1.1f).build()))
-                .smallToolStartingSlots()
-                // traits
-                .module(ToolTraitsModule.builder()
-                        .trait(TinkersWeaponryModifierIds.LENGTHY).build())
-                .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
-                // behavior
-                .module(swordHarvest)
-                .module(new SweepWeaponAttack(1));
 
         define(TinkersWeaponryToolDefinitions.LANCE)
                 // parts
