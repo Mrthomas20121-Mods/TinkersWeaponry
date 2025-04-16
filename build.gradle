@@ -16,9 +16,9 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle'
 
-version = tinkers_weaponry_version
-group = 'mrthomas20121.tinkers_weaponry'
-archivesBaseName = 'tinkers_weaponry'
+version = tinkersweaponry_version
+group = 'mrthomas20121.tinkersweaponry'
+archivesBaseName = 'tinkersweaponry'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
@@ -36,7 +36,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                tinkers_weaponry {
+                tinkersweaponry {
                     source sourceSets.main
                 }
             }
@@ -51,7 +51,7 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             mods {
-                tinkers_weaponry {
+                tinkersweaponry {
                     source sourceSets.main
                 }
             }
@@ -65,10 +65,10 @@ minecraft {
 
             property 'forge.logging.console.level', 'debug'
 
-            args '--mod', 'tinkers_weaponry', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'tconstruct'
+            args '--mod', 'tinkersweaponry', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/'), '--existing-mod', 'tconstruct'
 
             mods {
-                tinkers_weaponry {
+                tinkersweaponry {
                     source sourceSets.main
                 }
             }
@@ -134,7 +134,7 @@ jar {
             "Specification-Version": "1",
             "Implementation-Title": project.name,
             "Implementation-Version": project.version,
-            "Implementation-Vendor" :"tinkers_weaponry",
+            "Implementation-Vendor" :"tinkersweaponry",
             "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
         ])
     }
