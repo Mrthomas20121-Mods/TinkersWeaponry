@@ -31,9 +31,9 @@ public class TinkersWeaponryItemModelProvider extends ItemModelProvider {
     }
 
     public void cast(CastItemObject cast, String castName) {
-        basicItem(cast.get(), "cast/"+castName + "_gold");
-        basicItem(cast.getSand(), "cast/"+castName + "_sand");
-        basicItem(cast.getRedSand(), "cast/"+castName + "_red_sand");
+        basicItem(cast.get(), "cast/"+castName);
+        basicItem(cast.getSand(), "sand_cast/"+castName);
+        basicItem(cast.getRedSand(), "red_sand_cast/"+castName);
     }
 
     public ItemModelBuilder basicItem(Item item, String texture)

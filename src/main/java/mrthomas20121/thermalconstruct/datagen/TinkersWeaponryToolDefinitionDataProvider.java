@@ -86,6 +86,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                         .set(ToolStats.ATTACK_DAMAGE, 3f)
                         .set(ToolStats.ATTACK_SPEED, 1.8f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 1.1f)
                         .set(ToolStats.MINING_SPEED, 0.5f)
                         .set(ToolStats.DURABILITY, 1.1f).build()))
                 .smallToolStartingSlots()
@@ -98,10 +99,36 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // behavior
                 .module(swordHarvest)
                 .module(new ParticleWeaponAttack(ParticleTypes.ELECTRIC_SPARK));
+
+        define(TinkersWeaponryToolDefinitions.PIKE)
+                // parts
+                .module(PartStatsModule.parts()
+                        .part(TinkersWeaponryItems.SPEAR_HEAD.get())
+                        .part(toolHandle, 0.5f)
+                        .part(toolHandle, 0.5f).build())
+                .module(defaultThreeParts)
+                // stats
+                .module(new SetStatsModule(StatsNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 3f)
+                        .set(ToolStats.ATTACK_SPEED, 1.8f).build()))
+                .module(new MultiplyStatsModule(MultiplierNBT.builder()
+                        .set(ToolStats.ATTACK_DAMAGE, 1.1f)
+                        .set(ToolStats.MINING_SPEED, 0.5f)
+                        .set(ToolStats.DURABILITY, 1.1f).build()))
+                .smallToolStartingSlots()
+                // traits
+                .module(ToolTraitsModule.builder()
+                        .trait(TinkersWeaponryModifierIds.LENGTHY)
+                        .trait(TinkerModifiers.piercing)
+                        .trait(TinkerModifiers.silkyShears).build())
+                .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
+                // behavior
+                .module(swordHarvest)
+                .module(new SweepWeaponAttack(2));
     }
 
     @Override
     public String getName() {
-        return null;
+        return "Tinkers' Weaponry Tool Definition Provider";
     }
 }

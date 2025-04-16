@@ -1,6 +1,7 @@
 package mrthomas20121.thermalconstruct.datagen;
 
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
+import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -28,6 +29,10 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
 
         addCast(TinkersWeaponryItems.GREAT_BLADE_CAST, "Great Blade");
         addCast(TinkersWeaponryItems.SPEAR_HEAD_CAST, "Spear Head");
+
+        addModifier(TinkersWeaponryModifierIds.LENGTHY, "Lengthy");
+        addModifierDesc(TinkersWeaponryModifierIds.LENGTHY, "Increase entity and block range by 1.5.");
+        addModifierFlavor(TinkersWeaponryModifierIds.LENGTHY, "Think Big!");
     }
 
     public void addCast(CastItemObject cast, String castName) {

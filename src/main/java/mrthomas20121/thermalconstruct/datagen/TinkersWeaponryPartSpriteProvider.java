@@ -16,6 +16,7 @@ public class TinkersWeaponryPartSpriteProvider extends AbstractPartSpriteProvide
 
     @Override
     protected void addAllSpites() {
-
+        addHead("great_blade");
+        addHead("spear_head");
     }
 }

@@ -1,0 +1,34 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":   "tinkersweaponry:item/tool/pike/head",
+    "handle": "tinkersweaponry:item/tool/pike/handle",
+    "guard":  "tinkersweaponry:item/tool/pike/guard",
+
+    "large_head":   "tinkersweaponry:item/tool/pike/large/head",
+    "large_handle": "tinkersweaponry:item/tool/pike/large/handle",
+    "large_guard":  "tinkersweaponry:item/tool/pike/large/guard"
+  },
+  "modifier_roots": {
+    "small": [ "tinkersweaponry:item/tool/pike/modifiers/" ],
+    "large": [ "tinkersweaponry:item/tool/pike/large/modifiers/" ]
+  },
+  "large": true,
+  "large_offset": [-2, 2],
+  "parts": [
+    { "name": "handle", "index": 1 },
+    { "name": "head",   "index": 0 },
+    { "name": "guard",  "index": 2 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tinkersweaponry:item/tool/pike/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tinkersweaponry:item/tool/pike/broken"
+    }
+  ]
+}

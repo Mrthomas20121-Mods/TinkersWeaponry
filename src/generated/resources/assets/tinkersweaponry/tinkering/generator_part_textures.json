@@ -1,0 +1,13 @@
+{
+  "parts": [
+    {
+      "path": "tinkersweaponry:item/tool/parts/great_blade",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/parts/spear_head",
+      "stat_type": "tconstruct:head"
+    }
+  ],
+  "replace": false
+}

@@ -1,0 +1,41 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head": "tinkersweaponry:item/tool/lance/head_broken",
+    "handle": "tinkersweaponry:item/tool/lance/handle",
+    "guard": "tinkersweaponry:item/tool/lance/guard",
+    "large_head": "tinkersweaponry:item/tool/lance/large/head_broken",
+    "large_handle": "tinkersweaponry:item/tool/lance/large/handle",
+    "large_guard": "tinkersweaponry:item/tool/lance/large/guard"
+  },
+  "modifier_roots": {
+    "small": [
+      "tinkersweaponry:item/tool/lance/modifiers/broken/",
+      "tinkersweaponry:item/tool/lance/modifiers/"
+    ],
+    "large": [
+      "tinkersweaponry:item/tool/lance/large/modifiers/broken/",
+      "tinkersweaponry:item/tool/lance/large/modifiers/"
+    ]
+  },
+  "large": true,
+  "large_offset": [
+    -2,
+    2
+  ],
+  "parts": [
+    {
+      "name": "handle",
+      "index": 1
+    },
+    {
+      "name": "head",
+      "index": 0
+    },
+    {
+      "name": "guard",
+      "index": 2
+    }
+  ]
+}

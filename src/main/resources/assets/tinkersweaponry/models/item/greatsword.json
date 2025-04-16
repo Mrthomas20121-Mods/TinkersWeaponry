@@ -1,0 +1,34 @@
+{
+  "loader": "tconstruct:tool",
+  "parent": "forge:item/default-tool",
+  "textures": {
+    "head":   "tinkersweaponry:item/tool/greatsword/head",
+    "handle": "tinkersweaponry:item/tool/greatsword/handle",
+    "guard":  "tinkersweaponry:item/tool/greatsword/guard",
+
+    "large_head":   "tinkersweaponry:item/tool/greatsword/large/head",
+    "large_handle": "tinkersweaponry:item/tool/greatsword/large/handle",
+    "large_guard":  "tinkersweaponry:item/tool/greatsword/large/guard"
+  },
+  "modifier_roots": {
+    "small": [ "tinkersweaponry:item/tool/greatsword/modifiers/" ],
+    "large": [ "tinkersweaponry:item/tool/greatsword/large/modifiers/" ]
+  },
+  "large": true,
+  "large_offset": [-2, 2],
+  "parts": [
+    { "name": "handle", "index": 1 },
+    { "name": "head",   "index": 0 },
+    { "name": "guard",  "index": 2 }
+  ],
+  "overrides": [
+    {
+      "predicate": { "tconstruct:charging": 2 },
+      "model": "tinkersweaponry:item/tool/greatsword/blocking"
+    },
+    {
+      "predicate": { "tconstruct:broken": 1 },
+      "model": "tinkersweaponry:item/tool/greatsword/broken"
+    }
+  ]
+}

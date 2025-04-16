@@ -4,6 +4,10 @@ import mrthomas20121.thermalconstruct.TinkersWeaponry;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagsProvider;
+import net.minecraft.tags.TagBuilder;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -13,6 +17,7 @@ import slimeknights.tconstruct.library.client.data.material.GeneratorPartTexture
 import slimeknights.tconstruct.library.client.data.material.MaterialPartTextureGenerator;
 import slimeknights.tconstruct.tools.data.sprite.TinkerMaterialSpriteProvider;
 
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = TinkersWeaponry.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,13 +32,13 @@ public class TinkersWeaponryDatagen {
         TinkerMaterialSpriteProvider materialSprites = new TinkerMaterialSpriteProvider();
 
         boolean server = event.includeServer();
-        TinkersWeaponryBlockTagsProvider blockTagsProvider = new TinkersWeaponryBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
-        generator.addProvider(server, blockTagsProvider);
-        generator.addProvider(server, new TinkersWeaponryItemTagsProvider(packOutput, lookupProvider, blockTagsProvider.contentsGetter(), existingFileHelper));
+        TinkersWeaponryBlockTagsProvider blockTags = new TinkersWeaponryBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
+        generator.addProvider(server, blockTags);
+        generator.addProvider(server, new TinkersWeaponryItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(server, new TinkersWeaponryRecipeProvider(packOutput));
         generator.addProvider(server, new TinkersWeaponryModifierProvider(packOutput));
-        generator.addProvider(server, new WeaponryStationSlotLayoutProvider(packOutput));
         generator.addProvider(server, new TinkersWeaponryToolDefinitionDataProvider(packOutput));
+        generator.addProvider(server, new WeaponryStationSlotLayoutProvider(packOutput));
 
         TinkersWeaponryPartSpriteProvider partSprites = new TinkersWeaponryPartSpriteProvider();
 

@@ -7,6 +7,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.registries.RegistryObject;
 import slimeknights.mantle.registration.deferred.ItemDeferredRegister;
 import slimeknights.mantle.registration.deferred.SynchronizedDeferredRegister;
@@ -16,11 +17,15 @@ import slimeknights.tconstruct.common.registration.ItemDeferredRegisterExtension
 import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
 import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
+import slimeknights.tconstruct.library.tools.item.IModifiable;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.TinkerToolParts;
 import slimeknights.tconstruct.tools.TinkerTools;
 import slimeknights.tconstruct.tools.item.ModifiableSwordItem;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
+
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class TinkersWeaponryItems {
 
@@ -63,11 +68,15 @@ public class TinkersWeaponryItems {
                     .withTabsBefore(TinkerTools.tabTools.getId())
                     .build());
 
-    private static void addToolTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
+    private static void addToolTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
+        Consumer<ItemStack> output = tab::accept;
+        acceptTool(output, GREATSWORD);
+        acceptTool(output, LANCE);
+        acceptTool(output, PIKE);
+    }
 
-        output.accept(GREATSWORD.get());
-        output.accept(LANCE.get());
-        output.accept(PIKE.get());
+    private static void acceptTool(Consumer<ItemStack> output, Supplier<? extends IModifiable> tool) {
+        ToolBuildHandler.addVariants(output, tool.get(), "");
     }
 
     private static void addToolPartTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
