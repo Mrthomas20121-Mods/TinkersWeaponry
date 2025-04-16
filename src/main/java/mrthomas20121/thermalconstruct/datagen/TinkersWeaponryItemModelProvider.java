@@ -50,9 +50,4 @@ public class TinkersWeaponryItemModelProvider extends ItemModelProvider {
                 .parent(new ModelFile.UncheckedModelFile("item/generated"))
                 .texture("layer0", new ResourceLocation(item.getNamespace(), "item/" + texture));
     }
-
-    @Override
-    public @NotNull String getName() {
-        return "Tinkers' Weaponry Model Provider";
-    }
 }

@@ -14,20 +14,12 @@ public class TinkersWeaponry {
 
 	public static final String MOD_ID = "tinkersweaponry";
 
-	public static String makeDescriptionId(String type, String name) {
-		return type + "." + MOD_ID + "." + name;
-	}
-
-	public static ResourceLocation getResource(String name) {
-		return new ResourceLocation(MOD_ID, name);
-	}
-
 	public TinkersWeaponry() {
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
 		TinkersWeaponryItems.ITEMS.register(bus);
 		TinkersWeaponryItems.CREATIVE_TABS.register(bus);
 
-		bus.addListener(EventPriority.NORMAL, false, GatherDataEvent.class, TinkersWeaponryDatagen::init);
+		//bus.addListener(TinkersWeaponryDatagen::init);
 	}
 }
