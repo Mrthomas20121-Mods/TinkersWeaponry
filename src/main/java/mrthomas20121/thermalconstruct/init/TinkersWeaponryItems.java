@@ -18,6 +18,7 @@ import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
 import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.TinkerToolParts;
+import slimeknights.tconstruct.tools.TinkerTools;
 import slimeknights.tconstruct.tools.item.ModifiableSwordItem;
 import slimeknights.tconstruct.tools.stats.HeadMaterialStats;
 
@@ -37,12 +38,11 @@ public class TinkersWeaponryItems {
     public static Item.Properties TOOLS = new Item.Properties().stacksTo(1);
 
     public static final ItemObject<ModifiableSwordItem> GREATSWORD = ITEMS.register("greatsword", () -> new ModifiableSwordItem(TOOLS, TinkersWeaponryToolDefinitions.GREATSWORD));
-    public static final ItemObject<ModifiableSwordItem> SPEAR = ITEMS.register("spear", () -> new ModifiableSwordItem(TOOLS, TinkersWeaponryToolDefinitions.SPEAR));
     public static final ItemObject<ModifiableSwordItem> PIKE = ITEMS.register("pike", () -> new ModifiableSwordItem(TOOLS, TinkersWeaponryToolDefinitions.PIKE));
     public static final ItemObject<ModifiableSwordItem> LANCE = ITEMS.register("lance", () -> new ModifiableSwordItem(TOOLS, TinkersWeaponryToolDefinitions.LANCE));
 
     public static final RegistryObject<CreativeModeTab> tabToolsPart = CREATIVE_TABS.register(
-            "smeltery", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tool_parts"))
+            "tinkersweaponry_tool_parts", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tool_parts"))
                     .icon(() -> {
                         MaterialVariantId material;
                         if (MaterialRegistry.isFullyLoaded()) {
@@ -57,21 +57,27 @@ public class TinkersWeaponryItems {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> tabTools = CREATIVE_TABS.register(
-            "smeltery", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tools"))
-                    .icon(() -> SPEAR.get().getRenderTool())
+            "tinkersweaponry_tools", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tools"))
+                    .icon(() -> LANCE.get().getRenderTool())
                     .displayItems(TinkersWeaponryItems::addToolTabItems)
-                    .withTabsBefore(TinkerToolParts.tabToolParts.getId())
+                    .withTabsBefore(TinkerTools.tabTools.getId())
                     .build());
 
     private static void addToolTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
 
         output.accept(GREATSWORD.get());
-        output.accept(SPEAR.get());
         output.accept(LANCE.get());
+        output.accept(PIKE.get());
     }
 
     private static void addToolPartTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
         output.accept(GREAT_BLADE.get());
         output.accept(SPEAR_HEAD.get());
+        output.accept(GREAT_BLADE_CAST.get());
+        output.accept(SPEAR_HEAD_CAST.get());
+        output.accept(GREAT_BLADE_CAST.getSand());
+        output.accept(SPEAR_HEAD_CAST.getSand());
+        output.accept(GREAT_BLADE_CAST.getRedSand());
+        output.accept(SPEAR_HEAD_CAST.getRedSand());
     }
 }
