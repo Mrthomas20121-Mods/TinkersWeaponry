@@ -34,6 +34,7 @@ public class TinkersWeaponryDatagen {
         boolean server = event.includeServer();
         TinkersWeaponryBlockTagsProvider blockTags = new TinkersWeaponryBlockTagsProvider(packOutput, lookupProvider, existingFileHelper);
         generator.addProvider(server, blockTags);
+        generator.addProvider(server, new TinkersWeaponryModifierTagsProvider(packOutput, existingFileHelper));
         generator.addProvider(server, new TinkersWeaponryItemTagsProvider(packOutput, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
         generator.addProvider(server, new TinkersWeaponryRecipeProvider(packOutput));
         generator.addProvider(server, new TinkersWeaponryModifierProvider(packOutput));
