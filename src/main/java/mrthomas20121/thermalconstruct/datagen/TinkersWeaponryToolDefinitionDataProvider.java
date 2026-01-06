@@ -119,7 +119,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // traits
                 .module(ToolTraitsModule.builder()
                         .trait(TinkersWeaponryModifierIds.LENGTHY)
-                        .trait(ModifierIds.antiaquatic)
+                        .trait(ModifierIds.antiaquatic, 2)
                         .trait(TinkerModifiers.silkyShears).build())
                 .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
                 // behavior
