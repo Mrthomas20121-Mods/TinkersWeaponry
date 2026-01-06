@@ -3,8 +3,6 @@ package mrthomas20121.thermalconstruct.datagen;
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
 import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryModifiers;
-import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolStats;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import slimeknights.tconstruct.common.registration.CastItemObject;
@@ -18,8 +16,6 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-
-        add(TinkersWeaponryToolStats.CRIT_CHANCE.getTranslationKey(), "Crit Chance ");
 
         add("itemGroup.tinkersweaponry.tool_parts", "Tinkers' Weaponry Tool Parts");
         add("itemGroup.tinkersweaponry.tools", "Tinkers' Weaponry Tools");
@@ -40,10 +36,6 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
         addModifier(TinkersWeaponryModifierIds.LENGTHY, "Lengthy");
         addModifierDesc(TinkersWeaponryModifierIds.LENGTHY, "Increase entity and block range by 1.5.");
         addModifierFlavor(TinkersWeaponryModifierIds.LENGTHY, "Think Big!");
-
-        addModifier(TinkersWeaponryModifiers.ANALYTIC.getId(), "Analytic");
-        addModifierDesc(TinkersWeaponryModifiers.ANALYTIC.getId(), "Increases Crit chance by 0.3");
-        addModifierFlavor(TinkersWeaponryModifiers.ANALYTIC.getId(), "Big Brain");
     }
 
     public void addCast(CastItemObject cast, String castName) {

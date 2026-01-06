@@ -23,26 +23,8 @@ public class TinkersWeaponryRecipeProvider extends RecipeProvider implements IMa
     @Override
     protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
 
-        // material folders
-        String materialFolder = "materials/";
-        String smelteryFolder = "smeltery/";
-
-        // modifier folders
-        String upgradeFolder = "tools/modifiers/upgrade/";
-        String abilityFolder = "tools/modifiers/ability/";
-        String slotlessFolder = "tools/modifiers/slotless/";
-        String upgradeSalvage = "tools/modifiers/salvage/upgrade/";
-        String abilitySalvage = "tools/modifiers/salvage/ability/";
-        String defenseFolder = "tools/modifiers/defense/";
-        String defenseSalvage = "tools/modifiers/salvage/defense/";
-        String compatFolder = "tools/modifiers/compat/";
-        String compatSalvage = "tools/modifiers/salvage/compat/";
-        String worktableFolder = "tools/modifiers/worktable/";
         String partFolder = "tools/parts/";
         String castFolder = "smeltery/casts/";
-
-        //castCreation(consumer, MaterialIngredient.of(TinkersWeaponryItems.GREAT_BLADE.get()), TinkersWeaponryItems.GREAT_BLADE_CAST, castFolder, "great_blade");
-        //castCreation(consumer, MaterialIngredient.of(TinkersWeaponryItems.SPEAR_HEAD.get()), TinkersWeaponryItems.SPEAR_HEAD_CAST, castFolder, "spear_head");
 
         toolBuilding(consumer, TinkersWeaponryItems.GREATSWORD.get(), "tools/building/");
         toolBuilding(consumer, TinkersWeaponryItems.LANCE.get(), "tools/building/");

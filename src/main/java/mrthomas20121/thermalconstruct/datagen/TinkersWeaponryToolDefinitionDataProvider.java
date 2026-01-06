@@ -3,7 +3,6 @@ package mrthomas20121.thermalconstruct.datagen;
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
 import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryModifiers;
 import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolDefinitions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.data.PackOutput;
@@ -28,6 +27,7 @@ import slimeknights.tconstruct.library.tools.nbt.MultiplierNBT;
 import slimeknights.tconstruct.library.tools.nbt.StatsNBT;
 import slimeknights.tconstruct.library.tools.stat.ToolStats;
 import slimeknights.tconstruct.tools.TinkerModifiers;
+import slimeknights.tconstruct.tools.data.ModifierIds;
 
 import static slimeknights.tconstruct.tools.TinkerToolParts.toolHandle;
 
@@ -119,7 +119,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // traits
                 .module(ToolTraitsModule.builder()
                         .trait(TinkersWeaponryModifierIds.LENGTHY)
-                        .trait(TinkersWeaponryModifiers.ANALYTIC)
+                        .trait(ModifierIds.antiaquatic)
                         .trait(TinkerModifiers.silkyShears).build())
                 .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
                 // behavior
