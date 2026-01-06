@@ -1,7 +1,7 @@
 modLoader="javafml"
 loaderVersion="[36,)"
 license="MIT License"
-issueTrackerURL="https://github.com/Mrthomas20121/ThermalConstruct/issues"
+issueTrackerURL="https://github.com/Mrthomas20121-Mods/tinkersweaponry/issues"
 
 [[mods]]
 modId="tinkersweaponry"
