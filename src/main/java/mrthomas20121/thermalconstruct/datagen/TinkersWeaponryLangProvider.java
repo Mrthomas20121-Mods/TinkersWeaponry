@@ -3,6 +3,8 @@ package mrthomas20121.thermalconstruct.datagen;
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
 import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalconstruct.init.TinkersWeaponryModifiers;
+import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolStats;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import slimeknights.tconstruct.common.registration.CastItemObject;
@@ -17,6 +19,8 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
 
+        add(TinkersWeaponryToolStats.CRIT_CHANCE.getTranslationKey(), "Crit Chance ");
+
         add("itemGroup.tinkersweaponry.tool_parts", "Tinkers' Weaponry Tool Parts");
         add("itemGroup.tinkersweaponry.tools", "Tinkers' Weaponry Tools");
 
@@ -27,12 +31,19 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
         add(TinkersWeaponryItems.PIKE.get(), "Pike");
         add(TinkersWeaponryItems.LANCE.get(), "Lance");
 
+        addPattern("great_blade", "Great Blade");
+        addPattern("spear_head", "Spear Head");
+
         addCast(TinkersWeaponryItems.GREAT_BLADE_CAST, "Great Blade");
         addCast(TinkersWeaponryItems.SPEAR_HEAD_CAST, "Spear Head");
 
         addModifier(TinkersWeaponryModifierIds.LENGTHY, "Lengthy");
         addModifierDesc(TinkersWeaponryModifierIds.LENGTHY, "Increase entity and block range by 1.5.");
         addModifierFlavor(TinkersWeaponryModifierIds.LENGTHY, "Think Big!");
+
+        addModifier(TinkersWeaponryModifiers.ANALYTIC.getId(), "Analytic");
+        addModifierDesc(TinkersWeaponryModifiers.ANALYTIC.getId(), "Increases Crit chance by 0.3");
+        addModifierFlavor(TinkersWeaponryModifiers.ANALYTIC.getId(), "Big Brain");
     }
 
     public void addCast(CastItemObject cast, String castName) {
@@ -51,6 +62,10 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
 
     public void addModifierDesc(ModifierId material, String s) {
         add("modifier."+material.getNamespace()+"."+material.getPath()+".description", s);
+    }
+
+    public void addPattern(String paternName, String value) {
+        add("pattern.%s.%s".formatted(TinkersWeaponry.MOD_ID, paternName), value);
     }
 
 

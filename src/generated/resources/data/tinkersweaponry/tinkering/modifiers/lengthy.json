@@ -17,21 +17,6 @@
       "unique": "tinkersweaponry.sword.entity_reach"
     },
     {
-      "type": "tconstruct:attribute",
-      "attribute": "forge:block_reach",
-      "flat": 1.5,
-      "operation": "addition",
-      "slots": [
-        "mainhand",
-        "offhand",
-        "feet",
-        "legs",
-        "chest",
-        "head"
-      ],
-      "unique": "tinkersweaponry.sword.block_reach"
-    },
-    {
       "type": "tconstruct:stat_boost",
       "flat": 0.9,
       "operation": "add",

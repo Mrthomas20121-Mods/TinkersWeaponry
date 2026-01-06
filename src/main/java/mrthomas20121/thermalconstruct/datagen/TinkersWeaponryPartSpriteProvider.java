@@ -18,5 +18,9 @@ public class TinkersWeaponryPartSpriteProvider extends AbstractPartSpriteProvide
     protected void addAllSpites() {
         addHead("great_blade");
         addHead("spear_head");
+
+        buildTool("greatsword").withLarge().addHead("head").addHandle("handle").addHandle("guard");
+        buildTool("lance").withLarge().addHead("head").addHandle("handle").addHandle("guard");
+        buildTool("pike").withLarge().addHead("head").addHandle("handle").addHandle("guard");
     }
 }

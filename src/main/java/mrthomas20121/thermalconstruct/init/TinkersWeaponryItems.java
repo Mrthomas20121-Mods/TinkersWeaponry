@@ -18,6 +18,7 @@ import slimeknights.tconstruct.library.materials.MaterialRegistry;
 import slimeknights.tconstruct.library.materials.definition.MaterialVariantId;
 import slimeknights.tconstruct.library.tools.helper.ToolBuildHandler;
 import slimeknights.tconstruct.library.tools.item.IModifiable;
+import slimeknights.tconstruct.library.tools.part.IMaterialItem;
 import slimeknights.tconstruct.library.tools.part.ToolPartItem;
 import slimeknights.tconstruct.tools.TinkerToolParts;
 import slimeknights.tconstruct.tools.TinkerTools;
@@ -47,7 +48,7 @@ public class TinkersWeaponryItems {
     public static final ItemObject<ModifiableSwordItem> LANCE = ITEMS.register("lance", () -> new ModifiableSwordItem(TOOLS, TinkersWeaponryToolDefinitions.LANCE));
 
     public static final RegistryObject<CreativeModeTab> tabToolsPart = CREATIVE_TABS.register(
-            "tinkersweaponry_tool_parts", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tool_parts"))
+            "tinkersweaponry_tool_parts", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkersweaponry.tool_parts"))
                     .icon(() -> {
                         MaterialVariantId material;
                         if (MaterialRegistry.isFullyLoaded()) {
@@ -62,7 +63,7 @@ public class TinkersWeaponryItems {
                     .build());
 
     public static final RegistryObject<CreativeModeTab> tabTools = CREATIVE_TABS.register(
-            "tinkersweaponry_tools", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkers_weaponry.tools"))
+            "tinkersweaponry_tools", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.tinkersweaponry.tools"))
                     .icon(() -> LANCE.get().getRenderTool())
                     .displayItems(TinkersWeaponryItems::addToolTabItems)
                     .withTabsBefore(TinkerTools.tabTools.getId())
@@ -79,14 +80,18 @@ public class TinkersWeaponryItems {
         ToolBuildHandler.addVariants(output, tool.get(), "");
     }
 
-    private static void addToolPartTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output output) {
-        output.accept(GREAT_BLADE.get());
-        output.accept(SPEAR_HEAD.get());
-        output.accept(GREAT_BLADE_CAST.get());
-        output.accept(SPEAR_HEAD_CAST.get());
-        output.accept(GREAT_BLADE_CAST.getSand());
-        output.accept(SPEAR_HEAD_CAST.getSand());
-        output.accept(GREAT_BLADE_CAST.getRedSand());
-        output.accept(SPEAR_HEAD_CAST.getRedSand());
+    private static void addToolPartTabItems(CreativeModeTab.ItemDisplayParameters itemDisplayParameters, CreativeModeTab.Output tab) {
+        accept(tab::accept, GREAT_BLADE);
+        accept(tab::accept, SPEAR_HEAD);
+        tab.accept(GREAT_BLADE_CAST.get());
+        tab.accept(SPEAR_HEAD_CAST.get());
+        tab.accept(GREAT_BLADE_CAST.getSand());
+        tab.accept(SPEAR_HEAD_CAST.getSand());
+        tab.accept(GREAT_BLADE_CAST.getRedSand());
+        tab.accept(SPEAR_HEAD_CAST.getRedSand());
+    }
+
+    private static void accept(Consumer<ItemStack> output, Supplier<? extends IMaterialItem> item) {
+        item.get().addVariants(output, "");
     }
 }

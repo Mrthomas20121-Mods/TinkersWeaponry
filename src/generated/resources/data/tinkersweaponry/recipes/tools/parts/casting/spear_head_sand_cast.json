@@ -1,0 +1,9 @@
+{
+  "type": "tconstruct:table_casting_material",
+  "cast": {
+    "tag": "tinkersweaponry:casts/single_use/spear_head"
+  },
+  "cast_consumed": true,
+  "item_cost": 2,
+  "result": "tinkersweaponry:spear_head"
+}

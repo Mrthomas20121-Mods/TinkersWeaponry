@@ -12,7 +12,13 @@
   "item.tinkersweaponry.spear_head_sand_cast": "Spear Head Sand Cast",
   "itemGroup.tinkersweaponry.tool_parts": "Tinkers' Weaponry Tool Parts",
   "itemGroup.tinkersweaponry.tools": "Tinkers' Weaponry Tools",
+  "modifier.tinkersweaponry.analytic": "Analytic",
+  "modifier.tinkersweaponry.analytic.description": "Increases Crit chance by 0.3",
+  "modifier.tinkersweaponry.analytic.flavor": "Big Brain",
   "modifier.tinkersweaponry.lengthy": "Lengthy",
   "modifier.tinkersweaponry.lengthy.description": "Increase entity and block range by 1.5.",
-  "modifier.tinkersweaponry.lengthy.flavor": "Think Big!"
+  "modifier.tinkersweaponry.lengthy.flavor": "Think Big!",
+  "pattern.tinkersweaponry.great_blade": "Great Blade",
+  "pattern.tinkersweaponry.spear_head": "Spear Head",
+  "tool_stat.tinkersweaponry.crit_chance": "Crit Chance "
 }

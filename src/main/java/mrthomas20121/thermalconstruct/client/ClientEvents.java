@@ -33,5 +33,6 @@ public class ClientEvents {
         registerItemColors(colors, TinkersWeaponryItems.GREATSWORD);
         registerItemColors(colors, TinkersWeaponryItems.LANCE);
         registerItemColors(colors, TinkersWeaponryItems.PIKE);
+
     }
 }

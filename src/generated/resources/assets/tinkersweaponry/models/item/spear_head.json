@@ -1,6 +1,7 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "forge:item/default",
+  "loader": "tconstruct:material",
   "textures": {
-    "layer0": "tinkersweaponry:item/tool/parts/spear_head"
+    "texture": "tinkersweaponry:item/tool/parts/spear_head"
   }
 }

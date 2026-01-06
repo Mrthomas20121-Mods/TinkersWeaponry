@@ -3,8 +3,8 @@ package mrthomas20121.thermalconstruct.datagen;
 import mrthomas20121.thermalconstruct.TinkersWeaponry;
 import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalconstruct.init.TinkersWeaponryModifiers;
 import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolDefinitions;
-import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolStats;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Blocks;
@@ -61,14 +61,14 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // stats
                 .module(new SetStatsModule(StatsNBT.builder()
                         .set(ToolStats.ATTACK_DAMAGE, 4f)
-                        .set(ToolStats.ATTACK_SPEED, 1.2f).build()))
+                        .set(ToolStats.ATTACK_SPEED, 1.1f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
                         .set(ToolStats.MINING_SPEED, 0.5f)
                         .set(ToolStats.DURABILITY, 1f).build()))
                 .smallToolStartingSlots()
                 // traits
                 .module(ToolTraitsModule.builder()
-                        .trait(TinkerModifiers.silkyShears).build())
+                        .trait(TinkerModifiers.necrotic).build())
                 .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
                 // behavior
                 .module(swordHarvest)
@@ -86,7 +86,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                         .set(ToolStats.ATTACK_DAMAGE, 3f)
                         .set(ToolStats.ATTACK_SPEED, 1.8f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
-                        .set(ToolStats.ATTACK_DAMAGE, 1.1f)
+                        .set(ToolStats.ATTACK_DAMAGE, 1.2f)
                         .set(ToolStats.MINING_SPEED, 0.5f)
                         .set(ToolStats.DURABILITY, 1.1f).build()))
                 .smallToolStartingSlots()
@@ -112,14 +112,14 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                         .set(ToolStats.ATTACK_DAMAGE, 3f)
                         .set(ToolStats.ATTACK_SPEED, 1.8f).build()))
                 .module(new MultiplyStatsModule(MultiplierNBT.builder()
-                        .set(ToolStats.ATTACK_DAMAGE, 1.1f)
+                        .set(ToolStats.ATTACK_DAMAGE, 1.2f)
                         .set(ToolStats.MINING_SPEED, 0.5f)
                         .set(ToolStats.DURABILITY, 1.1f).build()))
                 .smallToolStartingSlots()
                 // traits
                 .module(ToolTraitsModule.builder()
                         .trait(TinkersWeaponryModifierIds.LENGTHY)
-                        .trait(TinkerModifiers.piercing)
+                        .trait(TinkersWeaponryModifiers.ANALYTIC)
                         .trait(TinkerModifiers.silkyShears).build())
                 .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
                 // behavior

@@ -46,6 +46,7 @@ public class TinkersWeaponryDatagen {
         generator.addProvider(client, new TinkersWeaponryItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(client, new WeaponryToolItemModelProvider(packOutput, existingFileHelper));
         generator.addProvider(client, new GeneratorPartTextureJsonGenerator(packOutput, TinkersWeaponry.MOD_ID, partSprites));
+        //generator.addProvider(client)
         generator.addProvider(client, new MaterialPartTextureGenerator(packOutput, existingFileHelper, partSprites, materialSprites));
         generator.addProvider(client, new TinkersWeaponryColorProvider(packOutput));
         generator.addProvider(client, new TinkersWeaponryLangProvider(packOutput));

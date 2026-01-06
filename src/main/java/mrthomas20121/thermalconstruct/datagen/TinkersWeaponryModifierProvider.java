@@ -22,9 +22,6 @@ public class TinkersWeaponryModifierProvider extends AbstractModifierProvider {
                 .addModule(AttributeModule.builder(ForgeMod.ENTITY_REACH.get(), AttributeModifier.Operation.ADDITION)
                         .unique("tinkersweaponry.sword.entity_reach")
                         .flat(1.5f))
-                .addModule(AttributeModule.builder(ForgeMod.BLOCK_REACH.get(), AttributeModifier.Operation.ADDITION)
-                        .unique("tinkersweaponry.sword.block_reach")
-                        .flat(1.5f))
                 .addModule(StatBoostModule.add(ToolStats.DURABILITY).flat(0.9f));
     }
 

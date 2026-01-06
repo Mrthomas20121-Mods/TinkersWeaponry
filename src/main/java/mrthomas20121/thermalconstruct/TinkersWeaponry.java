@@ -1,10 +1,8 @@
 package mrthomas20121.thermalconstruct;
 
-import mrthomas20121.thermalconstruct.datagen.TinkersWeaponryDatagen;
 import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
+import mrthomas20121.thermalconstruct.init.TinkersWeaponryModifiers;
+import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolStats;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -19,7 +17,9 @@ public class TinkersWeaponry {
 
 		TinkersWeaponryItems.ITEMS.register(bus);
 		TinkersWeaponryItems.CREATIVE_TABS.register(bus);
+		TinkersWeaponryModifiers.MODIFIERS.register(bus);
 
-		//bus.addListener(TinkersWeaponryDatagen::init);
+		// init tool stats so they're loaded before datapacks
+		TinkersWeaponryToolStats.init();
 	}
 }

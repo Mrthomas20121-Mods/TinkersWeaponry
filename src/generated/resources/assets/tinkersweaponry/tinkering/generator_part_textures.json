@@ -7,6 +7,78 @@
     {
       "path": "tinkersweaponry:item/tool/parts/spear_head",
       "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/guard",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/large/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/large/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/greatsword/large/guard",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/guard",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/large/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/large/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/lance/large/guard",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/guard",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/large/head",
+      "stat_type": "tconstruct:head"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/large/handle",
+      "stat_type": "tconstruct:handle"
+    },
+    {
+      "path": "tinkersweaponry:item/tool/pike/large/guard",
+      "stat_type": "tconstruct:handle"
     }
   ],
   "replace": false

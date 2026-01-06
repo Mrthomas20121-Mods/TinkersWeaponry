@@ -10,6 +10,7 @@ import slimeknights.mantle.recipe.data.ICommonRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IMaterialRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.ISmelteryRecipeHelper;
 import slimeknights.tconstruct.library.data.recipe.IToolRecipeHelper;
+import slimeknights.tconstruct.library.recipe.ingredient.MaterialIngredient;
 
 import java.util.function.Consumer;
 
@@ -24,8 +25,6 @@ public class TinkersWeaponryRecipeProvider extends RecipeProvider implements IMa
 
         // material folders
         String materialFolder = "materials/";
-
-        String castFolder = "casting/";
         String smelteryFolder = "smeltery/";
 
         // modifier folders
@@ -39,13 +38,18 @@ public class TinkersWeaponryRecipeProvider extends RecipeProvider implements IMa
         String compatFolder = "tools/modifiers/compat/";
         String compatSalvage = "tools/modifiers/salvage/compat/";
         String worktableFolder = "tools/modifiers/worktable/";
+        String partFolder = "tools/parts/";
+        String castFolder = "smeltery/casts/";
 
-        castCreation(consumer, Ingredient.of(TinkersWeaponryItems.GREAT_BLADE.get()), TinkersWeaponryItems.GREAT_BLADE_CAST, castFolder, "great_blade");
-        castCreation(consumer, Ingredient.of(TinkersWeaponryItems.SPEAR_HEAD.get()), TinkersWeaponryItems.SPEAR_HEAD_CAST, castFolder, "spear_head");
+        //castCreation(consumer, MaterialIngredient.of(TinkersWeaponryItems.GREAT_BLADE.get()), TinkersWeaponryItems.GREAT_BLADE_CAST, castFolder, "great_blade");
+        //castCreation(consumer, MaterialIngredient.of(TinkersWeaponryItems.SPEAR_HEAD.get()), TinkersWeaponryItems.SPEAR_HEAD_CAST, castFolder, "spear_head");
 
         toolBuilding(consumer, TinkersWeaponryItems.GREATSWORD.get(), "tools/building/");
         toolBuilding(consumer, TinkersWeaponryItems.LANCE.get(), "tools/building/");
         toolBuilding(consumer, TinkersWeaponryItems.PIKE.get(), "tools/building/");
+
+        partRecipes(consumer, TinkersWeaponryItems.GREAT_BLADE, TinkersWeaponryItems.GREAT_BLADE_CAST, 2, partFolder, castFolder);
+        partRecipes(consumer, TinkersWeaponryItems.SPEAR_HEAD, TinkersWeaponryItems.SPEAR_HEAD_CAST, 2, partFolder, castFolder);
     }
 
     @Override
