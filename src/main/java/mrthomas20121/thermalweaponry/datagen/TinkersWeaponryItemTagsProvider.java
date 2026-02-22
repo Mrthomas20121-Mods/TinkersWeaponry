@@ -1,7 +1,7 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;

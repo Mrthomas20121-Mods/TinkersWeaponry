@@ -1,6 +1,6 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
 import slimeknights.tconstruct.library.client.data.material.AbstractPartSpriteProvider;
 
 public class TinkersWeaponryPartSpriteProvider extends AbstractPartSpriteProvider {

@@ -1,6 +1,6 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
+import mrthomas20121.thermalweaponry.TinkersWeaponryModifierIds;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraftforge.common.ForgeMod;

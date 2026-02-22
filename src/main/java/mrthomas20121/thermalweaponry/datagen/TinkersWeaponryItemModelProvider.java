@@ -1,7 +1,7 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -12,15 +12,10 @@ import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-import org.jetbrains.annotations.NotNull;
 import slimeknights.mantle.registration.object.ItemObject;
 import slimeknights.tconstruct.common.data.model.MaterialModelBuilder;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.library.tools.part.MaterialItem;
-
-import java.util.Objects;
-
-import static slimeknights.tconstruct.TConstruct.getResource;
 
 public class TinkersWeaponryItemModelProvider extends ItemModelProvider {
 

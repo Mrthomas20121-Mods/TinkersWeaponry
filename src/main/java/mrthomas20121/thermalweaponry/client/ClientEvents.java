@@ -1,7 +1,7 @@
-package mrthomas20121.thermalconstruct.client;
+package mrthomas20121.thermalweaponry.client;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.client.color.item.ItemColors;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterColorHandlersEvent;
@@ -9,7 +9,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import slimeknights.tconstruct.library.client.model.TinkerItemProperties;
-import slimeknights.tconstruct.tools.TinkerTools;
 
 import static slimeknights.tconstruct.library.client.model.tools.ToolModel.registerItemColors;
 

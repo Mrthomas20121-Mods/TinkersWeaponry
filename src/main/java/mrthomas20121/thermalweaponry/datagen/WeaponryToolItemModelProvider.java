@@ -1,12 +1,11 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
 import com.google.gson.JsonObject;
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import slimeknights.tconstruct.library.data.AbstractToolItemModelProvider;
-import slimeknights.tconstruct.tools.TinkerTools;
 
 import java.io.IOException;
 

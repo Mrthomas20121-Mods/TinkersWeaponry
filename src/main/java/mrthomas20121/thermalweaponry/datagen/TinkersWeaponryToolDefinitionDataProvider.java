@@ -1,9 +1,9 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
-import mrthomas20121.thermalconstruct.util.TinkersWeaponryToolDefinitions;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.TinkersWeaponryModifierIds;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.util.TinkersWeaponryToolDefinitions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Blocks;

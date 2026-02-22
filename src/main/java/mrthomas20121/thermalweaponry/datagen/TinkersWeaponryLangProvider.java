@@ -1,8 +1,8 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.TinkersWeaponryModifierIds;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.LanguageProvider;
 import slimeknights.tconstruct.common.registration.CastItemObject;

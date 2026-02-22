@@ -1,4 +1,4 @@
-package mrthomas20121.thermalconstruct;
+package mrthomas20121.thermalweaponry;
 
 import slimeknights.tconstruct.library.modifiers.ModifierId;
 

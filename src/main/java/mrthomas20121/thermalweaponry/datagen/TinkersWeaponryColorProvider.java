@@ -1,7 +1,7 @@
-package mrthomas20121.thermalconstruct.datagen;
+package mrthomas20121.thermalweaponry.datagen;
 
-import mrthomas20121.thermalconstruct.TinkersWeaponry;
-import mrthomas20121.thermalconstruct.TinkersWeaponryModifierIds;
+import mrthomas20121.thermalweaponry.TinkersWeaponry;
+import mrthomas20121.thermalweaponry.TinkersWeaponryModifierIds;
 import net.minecraft.data.PackOutput;
 
 public class TinkersWeaponryColorProvider extends MantleColorGenerator {

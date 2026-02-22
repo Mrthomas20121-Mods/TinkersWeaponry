@@ -1,6 +1,6 @@
-package mrthomas20121.thermalconstruct;
+package mrthomas20121.thermalweaponry;
 
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;

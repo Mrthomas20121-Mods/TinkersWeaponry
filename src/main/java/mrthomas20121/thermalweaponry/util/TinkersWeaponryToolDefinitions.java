@@ -1,6 +1,6 @@
-package mrthomas20121.thermalconstruct.util;
+package mrthomas20121.thermalweaponry.util;
 
-import mrthomas20121.thermalconstruct.init.TinkersWeaponryItems;
+import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import slimeknights.tconstruct.library.tools.definition.ToolDefinition;
 
 public class TinkersWeaponryToolDefinitions {
