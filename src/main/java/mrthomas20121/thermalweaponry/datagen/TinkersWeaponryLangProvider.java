@@ -4,6 +4,7 @@ import mrthomas20121.thermalweaponry.TinkersWeaponry;
 import mrthomas20121.thermalweaponry.TinkersWeaponryModifierIds;
 import mrthomas20121.thermalweaponry.init.TinkersWeaponryItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.item.Item;
 import net.minecraftforge.common.data.LanguageProvider;
 import slimeknights.tconstruct.common.registration.CastItemObject;
 import slimeknights.tconstruct.library.modifiers.ModifierId;
@@ -27,6 +28,10 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
         add(TinkersWeaponryItems.PIKE.get(), "Pike");
         add(TinkersWeaponryItems.LANCE.get(), "Lance");
 
+        addToolDesc(TinkersWeaponryItems.GREATSWORD.get(), "The greatsword is a weapon with healing properties");
+        addToolDesc(TinkersWeaponryItems.PIKE.get(), "The Pike is a weapon very good at killing aquatic mobs.");
+        addToolDesc(TinkersWeaponryItems.LANCE.get(), "The Lance is a weapon very good at piercing mobs.");
+
         addPattern("great_blade", "Great Blade");
         addPattern("spear_head", "Spear Head");
 
@@ -42,6 +47,10 @@ public class TinkersWeaponryLangProvider extends LanguageProvider {
         add(cast.getSand(), castName + " Sand Cast");
         add(cast.getRedSand(), castName + " Red Sand Cast");
         add(cast.get(), castName + " Cast");
+    }
+
+    public void addToolDesc(Item key, String name) {
+        add(key.getDescriptionId()+".description", name);
     }
 
     public void addModifier(ModifierId material, String s) {

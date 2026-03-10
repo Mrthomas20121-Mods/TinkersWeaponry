@@ -5,11 +5,11 @@
       "parts": [
         "tinkersweaponry:spear_head",
         {
-          "item": "tconstruct:tool_handle",
+          "item": "tconstruct:tough_handle",
           "scale": 0.5
         },
         {
-          "item": "tconstruct:tool_handle",
+          "item": "tconstruct:tough_handle",
           "scale": 0.5
         }
       ],

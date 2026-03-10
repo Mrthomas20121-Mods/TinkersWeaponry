@@ -11,6 +11,7 @@ import net.minecraftforge.common.ToolActions;
 import slimeknights.tconstruct.common.TinkerTags;
 import slimeknights.tconstruct.library.data.tinkering.AbstractToolDefinitionDataProvider;
 import slimeknights.tconstruct.library.materials.RandomMaterial;
+import slimeknights.tconstruct.library.modifiers.ModifierId;
 import slimeknights.tconstruct.library.tools.definition.module.ToolModule;
 import slimeknights.tconstruct.library.tools.definition.module.build.MultiplyStatsModule;
 import slimeknights.tconstruct.library.tools.definition.module.build.SetStatsModule;
@@ -30,6 +31,7 @@ import slimeknights.tconstruct.tools.TinkerModifiers;
 import slimeknights.tconstruct.tools.data.ModifierIds;
 
 import static slimeknights.tconstruct.tools.TinkerToolParts.toolHandle;
+import static slimeknights.tconstruct.tools.TinkerToolParts.toughHandle;
 
 public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefinitionDataProvider {
 
@@ -93,7 +95,7 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // traits
                 .module(ToolTraitsModule.builder()
                         .trait(TinkersWeaponryModifierIds.LENGTHY)
-                        .trait(TinkerModifiers.piercing)
+                        .trait(ModifierIds.pierce)
                         .trait(TinkerModifiers.silkyShears).build())
                 .module(ToolActionsModule.of(ToolActions.SWORD_DIG))
                 // behavior
@@ -104,8 +106,8 @@ public class TinkersWeaponryToolDefinitionDataProvider extends AbstractToolDefin
                 // parts
                 .module(PartStatsModule.parts()
                         .part(TinkersWeaponryItems.SPEAR_HEAD.get())
-                        .part(toolHandle, 0.5f)
-                        .part(toolHandle, 0.5f).build())
+                        .part(toughHandle, 0.5f)
+                        .part(toughHandle, 0.5f).build())
                 .module(defaultThreeParts)
                 // stats
                 .module(new SetStatsModule(StatsNBT.builder()
