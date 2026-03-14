@@ -23,8 +23,8 @@ public class WeaponryStationSlotLayoutProvider extends AbstractStationSlotLayout
         defineModifiable(TinkersWeaponryItems.LANCE)
                 .sortIndex(SORT_WEAPON + SORT_LARGE)
                 .addInputItem(TinkersWeaponryItems.SPEAR_HEAD, 48, 26)
-                .addInputItem(TinkerToolParts.toughHandle, 12, 62)
-                .addInputItem(TinkerToolParts.toughHandle, 30, 44)
+                .addInputItem(TinkerToolParts.toolHandle, 12, 62)
+                .addInputItem(TinkerToolParts.toolHandle, 30, 44)
                 .build();
 
         defineModifiable(TinkersWeaponryItems.PIKE)
